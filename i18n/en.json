@@ -1,0 +1,14 @@
+{
+  "popup.title": "Translate",
+  "popup.translating": "Translating…",
+  "popup.direction": "%1 → %2",
+  "popup.directionCopied": "%1 · copied",
+  "popup.nothingSelected": "Select some text first",
+  "popup.timeout": "Translation timed out",
+  "popup.failed": "Couldn't translate — is crow-translate installed and online?",
+  "history.search": "Search translations…",
+  "history.hint": "Enter copy · Shift+Enter original · Del remove",
+  "history.empty": "No translations yet",
+  "history.noMatches": "No matches for \"%1\"",
+  "history.clearConfirm": "Delete all translation history?"
+}

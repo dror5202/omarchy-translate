@@ -1,0 +1,14 @@
+{
+  "popup.title": "תרגום",
+  "popup.translating": "מתרגם…",
+  "popup.direction": "%1 → %2",
+  "popup.directionCopied": "%1 · הועתק",
+  "popup.nothingSelected": "קודם צריך לסמן טקסט",
+  "popup.timeout": "התרגום לקח יותר מדי זמן",
+  "popup.failed": "התרגום נכשל — האם crow-translate מותקן ויש חיבור?",
+  "history.search": "חיפוש בתרגומים…",
+  "history.hint": "Enter העתקה · Shift+Enter מקור · Del מחיקה",
+  "history.empty": "עדיין אין תרגומים",
+  "history.noMatches": "אין תוצאות עבור \"%1\"",
+  "history.clearConfirm": "למחוק את כל היסטוריית התרגומים?"
+}
