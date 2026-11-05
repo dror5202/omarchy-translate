@@ -23,8 +23,16 @@ keycode, so it also works when a non-Latin keyboard layout is active:
 
 ```lua
 o.bind("SUPER + ALT + code:28", "Translate selection", "omarchy-shell drorko.translate translate")
-o.bind("SUPER + ALT + SHIFT + code:28", "Translation history", "omarchy-shell drorko.translate history")
+o.bind("SUPER + ALT + code:43", "Translation history", "omarchy-shell drorko.translate history")
+
+-- Optional: let SUPER+comma close the card like a notification, and otherwise
+-- act on the last notification as usual.
+hl.unbind("SUPER + comma")
+o.bind("SUPER + comma", "Dismiss translation or last notification",
+  "[ \"$(omarchy-shell drorko.translate dismiss 2>/dev/null)\" = closed ] || omarchy-shell notifications act")
 ```
+
+Avoid ALT + SHIFT combinations if you switch keyboard layouts with Alt+Shift.
 
 ## Use
 
@@ -36,8 +44,9 @@ translates the clipboard instead.
 - Left click copies the translation again and closes the card. Right click
   only closes it.
 - Pressing the key again on the same selection closes the card.
+- **Super + ,** closes it like a notification (with the optional binding).
 
-**Super + Alt + Shift + T** opens the history:
+**Super + Alt + H** opens the history:
 
 | Key | Action |
 |---|---|
@@ -80,6 +89,7 @@ the clipboard. Changes apply right away.
 omarchy-shell drorko.translate translate   # translate the selection
 omarchy-shell drorko.translate history     # open / close the history
 omarchy-shell drorko.translate close       # close the popup and history
+omarchy-shell drorko.translate dismiss     # close the popup; prints "closed" or "none"
 ```
 
 ## Tests

@@ -190,6 +190,13 @@ Item {
     function translate(): string { root.translateSelection(); return "ok" }
     function history(): string { root.toggleHistory(); return "ok" }
     function close(): string { root.closePopup(); root.historyOpened = false; return "ok" }
+    // For a "dismiss notification" key: closes the card and says whether
+    // there was one, so the key can fall through to notifications otherwise.
+    function dismiss(): string {
+      if (!root.popupOpened) return "none"
+      root.closePopup()
+      return "closed"
+    }
     function ping(): string { return "ok" }
   }
 
