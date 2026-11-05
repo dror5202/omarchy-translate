@@ -26,10 +26,11 @@ o.bind("SUPER + ALT + code:28", "Translate selection", "omarchy-shell drorko.tra
 o.bind("SUPER + ALT + code:43", "Translation history", "omarchy-shell drorko.translate history")
 
 -- Optional: let SUPER+comma close the card like a notification, and otherwise
--- act on the last notification as usual.
+-- act on the last notification as usual. By keycode (59 = comma) so it also
+-- works on non-Latin layouts.
 hl.unbind("SUPER + comma")
-o.bind("SUPER + comma", "Dismiss translation or last notification",
-  "[ \"$(omarchy-shell drorko.translate dismiss 2>/dev/null)\" = closed ] || omarchy-shell notifications act")
+o.bind("SUPER + code:59", "Dismiss translation or last notification",
+  os.getenv("HOME") .. "/.config/omarchy/plugins/drorko.translate/bin/dismiss-or-notify")
 ```
 
 Avoid ALT + SHIFT combinations if you switch keyboard layouts with Alt+Shift.

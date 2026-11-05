@@ -1,0 +1,7 @@
+#!/bin/bash
+# SUPER+comma: close an open drorko.translate card; with none open, act on the
+# last notification (Omarchy's default for the key).
+if [[ $(omarchy-shell drorko.translate dismiss 2>/dev/null) == closed ]]; then
+  exit 0
+fi
+exec omarchy-shell notifications act

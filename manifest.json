@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "drorko.translate",
   "name": "Translate",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Dror Peretz",
   "description": "Translate the selected text with a hotkey: the translation pops up next to the mouse pointer, is copied to the clipboard, and is kept in a searchable history.",
   "kinds": [
